@@ -13,6 +13,9 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+    void user(){
+      print('user tapped');
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -36,35 +39,31 @@ class MyApp extends StatelessWidget {
      actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout,
     color: Colors.white,
     ))
+    
 ],
+
       ),
       body: Center(
         
-        
-        child: Container(
-          height: 300,
-          width: 300,
-          padding: EdgeInsets.all(25),
-          decoration: BoxDecoration(
-          color: Colors.lightBlueAccent,
-          borderRadius: BorderRadius.circular(25)
+        child: GestureDetector(
+          onTap: user,
+          child: Container(
+            height: 200,
+            width: 200,
+            color: Colors.black,
+            child: Center(
+              child: Text(
+                'Tap me',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            
           
           ),
-         child: Text(
-          'A\'nor Shuaip', 
-          
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-
-
-          ),
-         
-         ),
-          
-        
-
         ),
+        
       ),
       ),
     );
