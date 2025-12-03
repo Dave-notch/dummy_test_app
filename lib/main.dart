@@ -18,16 +18,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
-        home: firspage(),
-        routes: {
-          '/firstpage' :(context) => firspage(),
-        },
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home: firspage(),
+      // routes: {
+      //   '/firstpage' :(context) => firspage(),
+      // },
     );
   }
 }

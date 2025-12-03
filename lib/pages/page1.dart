@@ -11,7 +11,9 @@ class firspage extends StatelessWidget {
       backgroundColor: Colors.blue,),
       body: Center(child: ElevatedButton(child: Text('go to second page'),
       onPressed: () => {
-        Navigator.pushNamed(context, '/firstpage')
+        Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => secondpage(),)
+        )
       },
       ),
     ),
