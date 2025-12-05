@@ -10,48 +10,25 @@ class firspage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('first page'),
       backgroundColor: Colors.blue,),
-      drawer: Drawer(
-        backgroundColor: Colors.brown[400],
-        child: Column(
-          children: [
-            DrawerHeader(child: Icon(
-              Icons.favorite,
-              size: 24,
-            ),
-          ),
-
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text(
-                'H O M E',
-                style: TextStyle(
-                  color: Colors.white,
-                  
-                ),
-                ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/Homepage');
-              },
-            ),
-            
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text(
-                'S E T T I N G S',
-                style: TextStyle(
-                  color: Colors.white,
-                  
-                ),
-                ),
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.pushNamed(context, '/Settingspage');
-                },
-            )
-          ],
-        ),
+     bottomNavigationBar: BottomNavigationBar(items: 
+     [
+      BottomNavigationBarItem(
+        icon: Icon(Icons.home),
+        label: 'Home',
       ),
+
+      BottomNavigationBarItem(
+        icon: Icon(Icons.settings),
+        label: 'Settings',
+      ),
+
+      BottomNavigationBarItem(
+        icon: Icon(Icons.person_3_sharp),
+        label: 'profile',
+      ),
+      
+     ]
+     ),
     );
   }
 }
