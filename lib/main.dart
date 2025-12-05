@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:dummy_test_app/pages/page1.dart';
 import 'package:dummy_test_app/pages/Home.dart';
+import 'package:dummy_test_app/pages/profile.dart';
 import 'package:dummy_test_app/pages/settings.dart';
 import 'package:flutter/material.dart';
 
@@ -23,11 +24,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: firspage(),
+      home: firstpage(),
       routes: {
-        '/firstpage' :(context) => firspage(),
+        '/firstpage' :(context) => firstpage(),
         '/Homepage' :(context) => Home(),
         '/Settingspage' :(context) => Settings(),
+        '/Profilepage' :(context) => Profile()
       },
     );
   }

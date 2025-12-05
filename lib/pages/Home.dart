@@ -8,9 +8,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('Home'),
+      body: Center(
+        child: Text('H O M E'),
       ),
     );
   }
