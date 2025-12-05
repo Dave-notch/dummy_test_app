@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:dummy_test_app/pages/page1.dart';
-import 'package:dummy_test_app/pages/page2.dart';
+import 'package:dummy_test_app/pages/Home.dart';
+import 'package:dummy_test_app/pages/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,9 +24,11 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       home: firspage(),
-      // routes: {
-      //   '/firstpage' :(context) => firspage(),
-      // },
+      routes: {
+        '/firstpage' :(context) => firspage(),
+        '/Homepage' :(context) => Home(),
+        '/Settingspage' :(context) => Settings(),
+      },
     );
   }
 }
