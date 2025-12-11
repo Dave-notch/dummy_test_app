@@ -1,5 +1,6 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, non_constant_identifier_names
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:dummy_test_app/pages/page1.dart';
 
 class CounterPage extends StatefulWidget {
@@ -13,7 +14,8 @@ class _CounterPageState extends State<CounterPage> {
   int counter = 0;
   void _incrementCounter() {
     setState(() {
-      counter++;
+      // counter += 9000000000000000000 * 9000000000000000000;
+      counter += 1;
     });
   }
 
@@ -26,22 +28,37 @@ class _CounterPageState extends State<CounterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green[400],
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('u pushed this button this many times'),
+            Text(
+              'You pushed this button this many times',
+              style: TextStyle(fontSize: 20),
+            ),
             Text(counter.toString(), style: TextStyle(fontSize: 48)),
-            ElevatedButton(
-              onPressed: _incrementCounter,
-              child: Text('Counter!!'),
+            SizedBox(
+              width: 110,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue[400],
+                ),
+                onPressed: _incrementCounter,
+                child: Text('Counter!!', style: TextStyle(color: Colors.white)),
+              ),
             ),
             Container(
               margin: EdgeInsets.only(top: 30),
+              width: 110,
+
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red[400],
+                ),
                 onPressed: CounterReset,
-                child: Text('reset'),
+                child: Text('reset', style: TextStyle(color: Colors.white)),
               ),
             ),
           ],
