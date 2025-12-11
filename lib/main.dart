@@ -1,19 +1,17 @@
+// ignore_for_file: unused_import
 import 'package:device_preview/device_preview.dart';
 import 'package:dummy_test_app/pages/page1.dart';
-import 'package:dummy_test_app/pages/Home.dart';
-import 'package:dummy_test_app/pages/profile.dart';
-import 'package:dummy_test_app/pages/settings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    DevicePreview(builder: (context){
-    return const MyApp();
-    
- })
-    );
+    DevicePreview(
+      builder: (context) {
+        return const MyApp();
+      },
+    ),
+  );
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,20 +19,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: firstpage(),
-      routes: {
-        '/firstpage' :(context) => firstpage(),
-        '/Homepage' :(context) => Home(),
-        '/Settingspage' :(context) => Settings(),
-        '/Profilepage' :(context) => Profile()
-      },
+      debugShowCheckedModeBanner: false,
+      home: CounterPage(),
     );
   }
 }
-
-
-
-
