@@ -1,6 +1,6 @@
 // ignore_for_file: unused_import
 import 'package:device_preview/device_preview.dart';
-import 'package:dummy_test_app/pages/page1.dart';
+import 'package:dummy_test_app/pages/text_filed.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: CounterPage(),
+      home: TextFiled(),
     );
   }
 }
