@@ -17,17 +17,22 @@ class _TextFiledState extends State<TextFiled> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(25),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextField(
-                controller: myController,
-                decoration: InputDecoration(border: OutlineInputBorder()),
-              ),
-              ElevatedButton(onPressed: GreetUser, child: Text('tap')),
-            ],
+        child: SizedBox(
+          child: Padding(
+            padding: const EdgeInsets.all(25),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                TextField(
+                  controller: myController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'enter some shit',
+                  ),
+                ),
+                ElevatedButton(onPressed: GreetUser, child: Text('tap')),
+              ],
+            ),
           ),
         ),
       ),
