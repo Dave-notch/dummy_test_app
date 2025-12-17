@@ -1,6 +1,6 @@
 // ignore_for_file: unused_import
 import 'package:device_preview/device_preview.dart';
-import 'package:dummy_test_app/pages/text_filed.dart';
+import 'package:dummy_test_app/pages/Home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: TextFiled(),
+      home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.green),
     );
   }
 }
