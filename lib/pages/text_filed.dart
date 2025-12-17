@@ -9,8 +9,14 @@ class TextFiled extends StatefulWidget {
 
 class _TextFiledState extends State<TextFiled> {
   TextEditingController myController = TextEditingController();
+
+  String GreetMessege = "";
+
   void GreetUser() {
-    print(myController.text);
+    String Username = myController.text;
+    setState(() {
+      GreetMessege = "Hello, " + Username;
+    });
   }
 
   @override
@@ -21,8 +27,9 @@ class _TextFiledState extends State<TextFiled> {
           child: Padding(
             padding: const EdgeInsets.all(25),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Text(GreetMessege),
                 TextField(
                   controller: myController,
                   decoration: InputDecoration(
