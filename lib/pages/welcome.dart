@@ -42,25 +42,21 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 450, left: 210, right: 20),
+              padding: const EdgeInsets.only(top: 450, left: 270, right: 20),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Material(
                   color: const Color.fromARGB(255, 229, 234, 230),
                   child: ListTile(
-                    leading: Center(
-                      child: Icon(
-                        Icons.next_plan,
-                        color: const Color.fromARGB(255, 0, 0, 0),
-                      ),
+                    leading: Icon(
+                      Icons.next_plan,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                     ),
-                    title: Center(
-                      child: Text(
-                        'Next',
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: const Color.fromARGB(255, 0, 0, 0),
-                        ),
+                    title: Text(
+                      'Next',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: const Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
 

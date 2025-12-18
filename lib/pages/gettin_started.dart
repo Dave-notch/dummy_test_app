@@ -42,7 +42,7 @@ class getStarted extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 450, left: 220, right: 20),
+              padding: const EdgeInsets.only(top: 450, left: 250, right: 40),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Material(
