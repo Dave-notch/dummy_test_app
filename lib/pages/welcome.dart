@@ -17,15 +17,15 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 100, right: 160),
+              padding: const EdgeInsets.only(top: 100, right: 210),
               child: Text(
                 "Hello!",
                 style: TextStyle(
-                  fontSize: 90,
+                  fontSize: 70,
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = 0
-                    ..color = Colors.white.withOpacity(0.8),
+                    ..color = Colors.white.withOpacity(0.7),
                 ),
               ),
             ),
@@ -42,7 +42,7 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 450, left: 270, right: 20),
+              padding: const EdgeInsets.only(top: 460, left: 270, right: 20),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Material(

@@ -1,6 +1,8 @@
 // ignore: unused_import
 // ignore_for_file: non_constant_identifier_names
 
+import 'dart:ffi';
+
 import 'package:dummy_test_app/Utilities/Todo_list.dart';
 import 'package:dummy_test_app/Utilities/dialog_box.dart';
 // ignore: unused_import
@@ -49,7 +51,12 @@ class _HomePageState extends State<HomePage> {
           );
         },
       );
-     
+    });
+  }
+
+  void deleteTask(int index) {
+    setState(() {
+      TodoList.removeAt(index);
     });
   }
 
@@ -74,6 +81,7 @@ class _HomePageState extends State<HomePage> {
             Taskname: TodoList[index][0],
             taskCompleted: TodoList[index][1],
             onChanged: (value) => CheckboxChanged(value, index),
+            DeleteFunction: (context) => deleteTask(index),
           );
         },
       ),

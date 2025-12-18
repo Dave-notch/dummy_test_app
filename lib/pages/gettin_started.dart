@@ -11,7 +11,10 @@ class getStarted extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
-            colors: [Colors.green, Colors.red],
+            colors: [
+              const Color.fromARGB(255, 39, 108, 157),
+              const Color.fromARGB(255, 91, 12, 94),
+            ],
           ),
         ),
         child: Column(
@@ -19,30 +22,30 @@ class getStarted extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 100, right: 160),
               child: Text(
-                "Hello!",
+                "Welcome!!",
                 style: TextStyle(
-                  fontSize: 90,
+                  fontSize: 50,
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = 0
-                    ..color = Colors.white.withOpacity(0.8),
+                    ..color = Colors.white.withOpacity(0.7),
                 ),
               ),
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 25, top: 15),
+              padding: const EdgeInsets.only(left: 25, top: 25),
               child: Text(
-                "Ready to make today productive?",
+                "This Todo app will make your day easier!!",
                 style: TextStyle(
-                  fontSize: 47,
+                  fontSize: 45,
                   fontWeight: FontWeight.bold,
-                  foreground: Paint()..color = Colors.white.withOpacity(0.8),
+                  foreground: Paint()..color = Colors.white.withOpacity(0.7),
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 450, left: 250, right: 40),
+              padding: const EdgeInsets.only(top: 460, left: 210, right: 20),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Material(
@@ -61,7 +64,7 @@ class getStarted extends StatelessWidget {
                     ),
 
                     onTap: () {
-                      Navigator.pushNamed(context, '/getStarted');
+                      Navigator.pushNamed(context, '/Homepage');
                     },
                   ),
                 ),
