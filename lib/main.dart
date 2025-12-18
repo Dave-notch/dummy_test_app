@@ -1,6 +1,8 @@
 // ignore_for_file: unused_import
 import 'package:device_preview/device_preview.dart';
 import 'package:dummy_test_app/pages/Home_page.dart';
+import 'package:dummy_test_app/pages/gettin_started.dart';
+import 'package:dummy_test_app/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,8 +24,12 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: WelcomePage(),
       theme: ThemeData(primarySwatch: Colors.green),
+      routes: {
+        '/Homepage': (context) => HomePage(),
+        '/getStarted': (context) => getStarted(),
+      },
     );
   }
 }

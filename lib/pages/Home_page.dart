@@ -15,20 +15,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final _controller = TextEditingController();
   List TodoList = [
-    ['make totorial', false],
-    ['do exercise', false],
+    // ['make totorial', false],
+    // ['do exercise', false],
   ];
 
   //checkbox tapped
-  void CheckboxChanged(bool? value, int index) {
+  void CheckboxChanged(bool? value, index) {
     setState(() {
       TodoList[index][1] = !TodoList[index][1];
     });
   }
 
-  void newTaskname() {
-    TextField();
+  void SaveNewtask() {
+    setState(() {
+      TodoList.add([_controller.text, false]);
+      _controller.clear();
+    });
+
+    Navigator.of(context).pop();
   }
 
   void createNewtask() {
@@ -36,9 +42,14 @@ class _HomePageState extends State<HomePage> {
       showDialog(
         context: context,
         builder: (context) {
-          return DialogBox();
+          return DialogBox(
+            controller: _controller,
+            Onsave: SaveNewtask,
+            Oncancel: () => Navigator.of(context).pop(),
+          );
         },
       );
+     
     });
   }
 
@@ -50,6 +61,7 @@ class _HomePageState extends State<HomePage> {
         title: Text('TO DO'),
         elevation: 100,
       ),
+
       backgroundColor: Colors.green[200],
       floatingActionButton: FloatingActionButton(
         onPressed: createNewtask,
@@ -65,6 +77,24 @@ class _HomePageState extends State<HomePage> {
           );
         },
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: ListTile(
+                leading: Text(
+                  "</>",
+                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                ),
+                title: Text('Contact with the Dev'),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
+
+
+// incoming Updates "Plan your Whole day"
