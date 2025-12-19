@@ -36,7 +36,7 @@ class _DialogBoxState extends State<DialogBox> {
                 decoration: InputDecoration(
                   hintText: "Enter your New task",
                   border: OutlineInputBorder(),
-                  errorText: hasError ? "Task cant be empty" : null,
+                  errorText: hasError ? "Task can't be empty" : null,
                 ),
               ),
               Padding(
