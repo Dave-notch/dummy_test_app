@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 import 'package:device_preview/device_preview.dart';
 import 'package:dummy_test_app/pages/Home_page.dart';
+import 'package:dummy_test_app/pages/On_boarding_screens.dart';
 import 'package:dummy_test_app/pages/gettin_started.dart';
 import 'package:dummy_test_app/pages/welcome.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +53,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.green),
 
       // Only change this line: show WelcomePage if first launch
-      home: firstLaunch ? const WelcomePage() : const getStarted(),
+      home: HomePage(),
+      routes: {},
     );
   }
 }
